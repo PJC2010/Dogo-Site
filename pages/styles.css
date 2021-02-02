@@ -69,20 +69,6 @@ p {
     height: auto;
 }
 
-.square_btn {
-	display: inline-block;
-	padding: 0.3em 1em;
-	text-decoration: none;
-	color: #67c5ff;
-	border: solid 2px #ffffff;
-	border-radius: 3px;
-	transition: .4s;
-}
-
-.square_btn:hover {
-	background: #67c5ff;
-}
-
 #header .header {
     min-height: 8vh;
     background-color: rgba(31, 30, 30, 0.24);
@@ -214,170 +200,6 @@ p {
 }
 /* End Header section */
 
-/*Hero Sections */
-
-#hero {
-	background-image: url(img/Dogo-Argentino.history.2.jpg);
-	background-size: cover;
-	background-position: top center;
-	position: relative;
-	z-index: 1;
-}
-#hero::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-color: black;
-	opacity: .7;
-	z-index: -1;
-}
-#hero .hero {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 50px;
-	justify-content: flex-start;
-}
-#hero h1 {
-	display: block;
-	width: fit-content;
-	font-size: 4rem;
-	position: relative;
-	color: transparent;
-	animation: text_reveal .5s ease forwards;
-	animation-delay: 1s;
-}
-#hero h1:nth-child(1) {
-	animation-delay: 1s;
-}
-#hero h1:nth-child(2) {
-	animation-delay: 2s;
-}
-#hero h1:nth-child(3) {
-	animation: text_reveal_name .5s ease forwards;
-	animation-delay: 3s;
-}
-#hero h1 span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 0;
-	background-color: crimson;
-	animation: text_reveal_box 1s ease;
-	animation-delay: .5s;
-}
-#hero h1:nth-child(1) span {
-	animation-delay: .5s;
-}
-#hero h1:nth-child(2) span {
-	animation-delay: 1.5s;
-}
-#hero h1:nth-child(3) span {
-	animation-delay: 2.5s;
-}
-
-/* End Hero Section */
-
-/* About Section */
-
-#about .about {
-	flex-direction: column-reverse;
-	text-align: center;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 100px 20px;
-}
-
-#about .col-left {
-	width: 250px;
-	height: 360px;
-}
-
-#about .col-right {
-	width: 100%;
-}
-
-#about .col-right h2 {
-	font-size: 1.8rem;
-	font-weight: 500;
-	letter-spacing: .2rem;
-	margin-bottom: 10px;
-}
-
-#about .col-right p {
-	margin-bottom: 20px;
-}
-
-#about .col-right {
-	color: black;
-	margin-bottom: 50px;
-	padding: 10px 20px;
-	font-size: 2rem;
-}
-#about .col-left .about-img {
-	height: 100%;
-	width: 100%;
-	position: relative;
-	border: 10px solid white;
-}
-#about .col-left .about-img::after {
-	content: '';
-	position: absolute;
-	left: -33px;
-	top: 19px;
-	height: 98%;
-	width: 98%;
-	border: 7px solid crimson;
-	z-index: -1;
-}
-
-/* End About Section */
-
-
-
-/* Footer */
-#footer {
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-}
-#footer .footer {
-	min-height: 200px;
-	flex-direction: column;
-	padding-top: 50px;
-	padding-bottom: 10px;
-}
-#footer h2 {
-	color: white;
-	font-weight: 500;
-	font-size: 1.8rem;
-	letter-spacing: .1rem;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-#footer .social-icon {
-	display: flex;
-	margin-bottom: 30px;
-}
-#footer .social-item {
-	height: 50px;
-	width: 50px;
-	margin: 0 5px;
-}
-#footer .social-item img {
-	filter: grayscale(1);
-	transition: .3s ease filter;
-}
-#footer .social-item:hover img {
-	filter: grayscale(0);
-}
-#footer p {
-	color: white;
-	font-size: 1.3rem;
-}
-/* End Footer */
-
 /* Keyframes */
 @keyframes hamburger_puls {
 	0% {
@@ -411,6 +233,79 @@ p {
 	}
 }
 /* End Keyframes */
+
+/* Start Contact form */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  
+  
+  .wrapper{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	max-width: 600px;
+	width: 100%;
+	background: #fff;
+	padding: 25px;
+	border-radius: 5px;
+	box-shadow: 4px 4px 2px rgb(7, 7, 7); 
+  }
+  
+  .wrapper h2{
+	text-align: center;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #332902;
+  }
+  
+  .wrapper .input_field{
+	margin-bottom: 10px;
+  }
+  
+  .wrapper .input_field input[type="text"],
+  .wrapper textarea{
+	border: 1px solid #e0e0e0;
+	width: 100%;
+	padding: 10px;
+  }
+  
+  .wrapper textarea{
+	resize: none;
+	height: 80px;
+  }
+  
+  .wrapper .btn input[type="submit"]{
+	border: 0px;
+	margin-top: 15px;
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+	
+	color: #332902;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-weight: bold;
+	border-radius: 25px;
+	cursor: pointer;
+  }
+  
+  #error_message{
+	margin-bottom: 20px;
+	background: #fe8b8e;
+	padding: 0px;
+	text-align: center;
+	font-size: 14px;
+	transition: all 0.5s ease;
+  }
+/* End Contact form */
 
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
@@ -491,5 +386,3 @@ p {
 		background-image: url(img/Dogo-Argentino.history.2.jpg);
 	}
 }
-
-
